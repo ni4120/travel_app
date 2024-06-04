@@ -1,0 +1,167 @@
+body{
+    background-color: #fafbfc;
+}
+
+h1{
+    text-align: center;
+    font-family: Comic;
+}
+
+.ireru{
+    background-color: aqua;
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+/*ボタン１*/
+.button1 {
+    text-align: center; /* このスタイルは特に必要ないかもしれませんが、他の用途に使っているなら残しておきます */
+    position: absolute; /* 絶対位置を使用します */
+    top: 0; /* 上端に固定 */
+    left: 0; /* 左端に固定 */
+    margin: 20px; /* ページの端から少し内側に配置するためのマージン */
+}
+  .button1 a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #383839;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 50px;
+    text-decoration: none;
+}
+.button1 a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+.button1 a:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-54%);
+}
+
+/*ボタン2*/
+.button2 {
+  text-align: center; /* このスタイルは特に必要ないかもしれませんが、他の用途に使っているなら残しておきます */
+  position: absolute; /* 絶対位置を使用します */
+  top: 0; /* 上端に固定 */
+  left: 130px; /* 左端に固定 */
+  margin: 20px; /* ページの端から少し内側に配置するためのマージン */
+}
+.button2 a {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 10px 25px;
+  color: #FFF;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  background: #383839;
+  filter: drop-shadow(0px 2px 4px #ccc);
+  border-radius: 50px;
+  text-decoration: none;
+}
+.button2 a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+.button2 a:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transition: 0.2s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-54%);
+}
+
+/*ボタン3*/
+.button3 {
+  text-align: center; /* このスタイルは特に必要ないかもしれませんが、他の用途に使っているなら残しておきます */
+  position: absolute; /* 絶対位置を使用します */
+  top: 0; /* 上端に固定 */
+  left: 1180px; /* 左端に固定 */
+  margin: 20px; /* ページの端から少し内側に配置するためのマージン */
+}
+.button3 a {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 10px 25px;
+  color: #FFF;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  background: #383839;
+  filter: drop-shadow(0px 2px 4px #ccc);
+  border-radius: 50px;
+  text-decoration: none;
+}
+.button3 a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+.button3 a:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transition: 0.2s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-54%);
+}
+
+/*ボタン4*/
+.button4 {
+  text-align: center; /* このスタイルは特に必要ないかもしれませんが、他の用途に使っているなら残しておきます */
+  position: absolute; /* 絶対位置を使用します */
+  top: 0; /* 上端に固定 */
+  left: 1290px; /* 左端に固定 */
+  margin: 20px; /* ページの端から少し内側に配置するためのマージン */
+}
+.button4 a {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 10px 25px;
+  color: #FFF;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  background: #383839;
+  filter: drop-shadow(0px 2px 4px #ccc);
+  border-radius: 50px;
+  text-decoration: none;
+}
+.button4 a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+.button4 a:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transition: 0.2s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-54%);
+}
