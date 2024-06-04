@@ -1,0 +1,81 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旅行アプリ</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <style>
+    #map { height: 400px; }
+  </style>
+</head>
+
+<body>
+  <h1>旅行スポット</h1>
+  <a href="/post">投稿する</a>
+  <div id="map"></div>
+  <div id="spot-info"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([36.2048, 138.2529], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var spots = <%- JSON.stringify(spots) %>;
+
+    spots.forEach(function(spot) {
+      if (spot.latitude && spot.longitude) {
+        var marker = L.marker([spot.latitude, spot.longitude]).addTo(map);
+        var imagesHtml = '';
+        if (spot.images) {
+          var images = JSON.parse(spot.images);
+          images.forEach(function(image) {
+            imagesHtml += '<img src="' + image + '" alt="' + spot.spotName + '" style="width: 100px; height: 100px;">';
+          });
+        }
+
+        marker.bindPopup('<b>' + spot.spotName + '</b><br>' + spot.recommendedPoint + '<br>' + spot.recommendedFood + '<br>' + spot.comment + '<br>' + imagesHtml);
+
+        marker.on('click', function() {
+          var spotInfo = '<h2>' + spot.spotName + '</h2>' +
+                         '<p><strong>おすすめポイント:</strong> ' + spot.recommendedPoint + '</p>' +
+                         '<p><strong>おすすめの食べ物:</strong> ' + spot.recommendedFood + '</p>' +
+                         '<p><strong>感想など:</strong> ' + spot.comment + '</p>' + imagesHtml +
+                         '<button class="delete-button" onclick="deleteSpot(' + spot.id + ')">削除</button>';
+
+          document.getElementById('spot-info').innerHTML = spotInfo;
+        });
+      }
+    });
+
+    function deleteSpot(id) {
+      if (confirm('本当にこのスポットを削除しますか？')) {
+        fetch('/delete', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ id: id })
+        })
+        .then(response => {
+          console.log("Delete response status:", response.status);
+          if (response.ok) {
+            alert('スポットが削除されました');
+            window.location.reload();
+          } else {
+            alert('スポットの削除に失敗しました');
+          }
+        })
+        .catch(error => {
+          console.error("Error during fetch:", error);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
