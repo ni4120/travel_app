@@ -8,8 +8,8 @@ h1{
 }
 
 .ireru{
-    background-color: aqua;
-    width: 600px;
+    background-color: rgb(195, 250, 250);
+    width: 800px;
     height: 300px;
     margin: 50px auto;
 }
@@ -164,4 +164,112 @@ h1{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   transform: translateY(-54%);
+}
+
+/*枠*/
+.box1 {
+  background-color: #FFF;
+  position: relative;
+  margin: 2em 40px;
+  padding: 0.5em 0.1em;
+  border: solid 3px #f19407;
+  border-radius: 8px;
+  width: 200px;
+}
+.box1 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #f19407;
+  color: #ffffff;
+  font-weight: bold;
+}
+.box1 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.box2 {
+  background-color: #FFF;
+  position: absolute;
+  margin: -78px 290px;
+  padding: 0.5em 0.1em;
+  border: solid 3px #f19407;
+  border-radius: 8px;
+  width: 200px;
+  
+}
+.box2 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 15px;
+  background: #f19407;
+  color: #ffffff;
+  font-weight: bold;
+}
+.box2 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.box3 {
+  background-color: #FFF;
+  position: absolute;
+  margin: -78px 540px;
+  padding: 0.5em 0.1em;
+  border: solid 3px #f19407;
+  border-radius: 8px;
+  width: 200px;
+  
+}
+.box3 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 15px;
+  background: #f19407;
+  color: #ffffff;
+  font-weight: bold;
+}
+.box3 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.box4 {
+  background-color: #FFF;
+  position: relative;
+  margin: 2em 40px;
+  padding: 0.5em 0.1em;
+  border: solid 3px #f19407;
+  border-radius: 8px;
+  width: 700px;
+  height: 100px;
+}
+.box4 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #f19407;
+  color: #ffffff;
+  font-weight: bold;
+}
+.box4 p {
+  margin: 0; 
+  padding: 0;
 }
