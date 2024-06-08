@@ -1,0 +1,104 @@
+/* General button styles 
+.button1, .button2, .button3, .button4 {
+  text-align: center;
+  margin: 10px;
+  padding: 10px 25px;
+  color: #FFF;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  background: #383839;
+  filter: drop-shadow(0px 2px 4px #ccc);
+  border-radius: 50px;
+  text-decoration: none;
+}
+.button1:hover, .button2:hover, .button3:hover, .button4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+.button1:after, .button2:after, .button3:after, .button4:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transition: 0.2s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-54%);
+}
+
+@media (min-width: 1024px) {
+  .button1 {
+    margin-right: 1.5rem;
+  }
+  .button2 {
+    margin-right: 1.5rem;
+  }
+  .button3 {
+    margin-right: 1.5rem;
+  }
+  .button4 {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    display:flex;
+  }
+  .button1, .button2, .button3, .button4 {
+    width: 30%;
+    margin: 10px 0;
+  }
+}
+*/
+/* General button styles */
+.button1, .button2, .button3, .button4 {
+  text-align: center;
+  margin: 10px;
+  padding: 10px 25px;
+  color: #FFF;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  background: #383839;
+  filter: drop-shadow(0px 2px 4px #ccc);
+  border-radius: 50px;
+  text-decoration: none;
+}
+.button1:hover, .button2:hover, .button3:hover, .button4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+.button1:after, .button2:after, .button3:after, .button4:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transition: 0.2s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-54%);
+}
+
+/* Responsive styles */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button1, .button2, .button3, .button4 {
+  flex: 1 1 auto;
+  margin: 10px;
+  max-width: calc(25% - 20px);
+}
+/*
+@media (max-width: 1024px) {
+  .button1, .button2, .button3, .button4 {
+    max-width: calc(50% - 20px);
+  }
+}
+*/
+
+@media (max-width: 600px) {
+  .button1, .button2, .button3, .button4 {
+    max-width: calc(100% - 20px);
+  }
+}

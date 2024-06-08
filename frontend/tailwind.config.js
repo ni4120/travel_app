@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/Users.js",
     "./src/components/Login.js",
     "./src/components/Header.js",
+    "./src/components/MyPage.js",
     "./src/index.css"
   ],
   theme: {

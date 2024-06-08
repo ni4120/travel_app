@@ -1,0 +1,20 @@
+/* src/components/css/CustomStyles.css */
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .custom-underline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 300px; 
+    height: 1px; 
+    
+    background-color: currentColor;
+  }
+  

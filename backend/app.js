@@ -23,7 +23,7 @@ connection.connect();
 
 // サーバーコード
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin:['http://localhost:3000'],
   credentials: true,
 };
 
@@ -118,20 +118,6 @@ app.post('/api/login', (req, res) => {
   });
 });
 
-app.post('/api/post', upload.array('images', 10), (req, res) => {
-  if (!req.session.userId) {
-    return res.status(401).json({ success: false, message: 'Not logged in' });
-  }
-  const { spotName, recommendedPoint, recommendedFood, comment, latitude, longitude } = req.body;
-  const images = req.files.map(file => file.path.replace('public', ''));
-  const post = { user_id: req.session.userId, spotName, recommendedPoint, recommendedFood, comment, latitude, longitude, images: JSON.stringify(images) };
-
-  connection.query('INSERT INTO spots SET ?', post, (error, results) => {
-    if (error) throw error;
-    res.json({ success: true });
-  });
-});
-
 
 app.get('/api/user-spots/:userId', (req, res) => {
   const { userId } = req.params;
@@ -181,6 +167,8 @@ app.get('/api/check-auth', (req, res) => {
 });
 
 
-app.listen(port, () => {
+
+
+app.listen(port,() => {
   console.log(`App listening at http://localhost:${port}`);
 });

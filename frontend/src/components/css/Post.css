@@ -1,3 +1,22 @@
-.map-choice{
-    margin-left:300px;
- }
+.post {
+    margin-top: 4rem;
+  }
+  
+  .map-choice {
+    margin-left: 300px;
+  }
+  
+  .post {
+    margin-top: 4rem;
+  }
+  
+  .map-choice {
+    margin-left: 300px;
+  }
+  
+  input, textarea {
+    width:60%;
+    height: 50px;
+    border: 1px solid #ccc; 
+  }
+  

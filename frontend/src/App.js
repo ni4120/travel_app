@@ -42,7 +42,6 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Check login status when the component mounts
     axios.get('http://localhost:3001/api/check-auth', { withCredentials: true })
       .then(response => {
         setIsLoggedIn(response.data.isLoggedIn);

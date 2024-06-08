@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -67,43 +66,93 @@ const Post = () => {
     return null;
   };
 
-  const handleLogout = () => {
-    axios.get('http://localhost:3001/api/logout')
-      .then(response => {
-        if (response.data.success) {
-          window.location.href = '/';
-        } else {
-          alert('Logout failed');
-        }
-      })
-      .catch(error => {
-        console.error('Error logging out:', error);
-        alert('Logout failed');
-      });
-  };
-
   return (
-    <div className="post">
+    <div className="stars">
+    <div className="text-center">
       <Header />
-      <h1>投稿ページ</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Spot Name" value={spotName} onChange={e => setSpotName(e.target.value)} required />
-        <input type="text" placeholder="Recommended Point" value={recommendedPoint} onChange={e => setRecommendedPoint(e.target.value)} required />
-        <input type="text" placeholder="Recommended Food" value={recommendedFood} onChange={e => setRecommendedFood(e.target.value)} required />
-        <textarea placeholder="Comment" value={comment} onChange={e => setComment(e.target.value)} required />
-        <input type="file" multiple onChange={handleFileChange} required />
-        <input type="hidden" value={latitude} required />
-        <input type="hidden" value={longitude} required />
-        <button type="submit">投稿</button>
-      </form>
-      <MapContainer center={[36.2048, 138.2529]} zoom={5} style={{ height: "400px", width: "100%" }}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
-        <MapClickHandler />
-        {markerPosition && <Marker position={markerPosition} icon={customIcon} />}
-      </MapContainer>
+      <div className="post mt-16">
+        <h1 className="text-3xl font-bold mb-8">投稿ページ</h1>
+        <form onSubmit={handleSubmit} className="mx-auto space-y-6 max-w-md">
+          <div className="flex flex-col space-y-4">
+            <div>
+              <label htmlFor="spotName" className="block text-sm font-medium text-gray-700">
+                Spot Name
+              </label>
+              <input 
+                type="text" 
+                value={spotName} 
+                className="mt-1 w-64 h-24 rounded-md border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+                onChange={e => setSpotName(e.target.value)} 
+                required 
+              />
+            </div>
+            <div>
+              <label htmlFor="recommendedPoint" className="block text-sm font-medium text-gray-700">
+                Recommended Point
+              </label>
+              <input 
+                type="text" 
+                value={recommendedPoint} 
+                className="mt-1 w-64 h-24 rounded-md border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+                onChange={e => setRecommendedPoint(e.target.value)} 
+                required 
+              />
+            </div>
+            <div>
+              <label htmlFor="recommendedFood" className="block text-sm font-medium text-gray-700">
+                Recommended Food
+              </label>
+              <input 
+                type="text" 
+                value={recommendedFood} 
+                className="mt-1 w-64 h-24 rounded-md border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+                onChange={e => setRecommendedFood(e.target.value)} 
+                required 
+              />
+            </div>
+            <div>
+              <label htmlFor="comment" className="block text-sm font-medium text-gray-700">
+                Comment
+              </label>
+              <textarea 
+                value={comment} 
+                className="mt-1 w-64 h-24 rounded-md border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+                onChange={e => setComment(e.target.value)} 
+                required 
+              />
+            </div>
+            <div>
+              <label htmlFor="images" className="block text-sm font-medium text-gray-700">
+                Spot Image
+              </label>
+              <input 
+                type="file" 
+                multiple 
+                className="mt-1 w-64 h-24 rounded-md border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+                onChange={handleFileChange} 
+                required 
+              />
+            </div>
+          </div>
+          <button type="submit" className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            投稿
+          </button>
+        </form>
+        <div className="mt-16 px-4 lg:px-16">
+          <h2 className="text-2xl mb-4">My Spots</h2>
+          <div className="w-full mb-8">
+            <MapContainer center={[36.2048, 138.2529]} zoom={5} style={{ height: "400px", width: "100%" }}>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <MapClickHandler /> 
+              {markerPosition && <Marker position={markerPosition} icon={customIcon} />}
+            </MapContainer>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };
