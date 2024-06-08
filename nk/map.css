@@ -6,7 +6,7 @@ h1{
 }
 
 .ireru{
-    background-color: rgb(195, 250, 250);
+    background-color: rgb(165, 199, 250);
     width: 800px;
     height: 300px;
     margin: 50px auto;
@@ -170,7 +170,7 @@ h1{
   position: relative;
   margin: 2em 40px;
   padding: 0.5em 0.1em;
-  border: solid 3px #f19407;
+  border: solid 3px #3b80ff;
   border-radius: 8px;
   width: 200px;
 }
@@ -182,7 +182,7 @@ h1{
   padding: 0 9px;
   line-height: 1;
   font-size: 19px;
-  background: #f19407;
+  background: #3b80ff;
   color: #ffffff;
   font-weight: bold;
 }
@@ -196,7 +196,7 @@ h1{
   position: absolute;
   margin: -78px 290px;
   padding: 0.5em 0.1em;
-  border: solid 3px #f19407;
+  border: solid 3px #3b80ff;
   border-radius: 8px;
   width: 200px;
   
@@ -209,7 +209,7 @@ h1{
   padding: 0 9px;
   line-height: 1;
   font-size: 15px;
-  background: #f19407;
+  background: #3b80ff;
   color: #ffffff;
   font-weight: bold;
 }
@@ -223,7 +223,7 @@ h1{
   position: absolute;
   margin: -78px 540px;
   padding: 0.5em 0.1em;
-  border: solid 3px #f19407;
+  border: solid 3px #3b80ff;
   border-radius: 8px;
   width: 200px;
   
@@ -236,7 +236,7 @@ h1{
   padding: 0 9px;
   line-height: 1;
   font-size: 15px;
-  background: #f19407;
+  background: #3b80ff;
   color: #ffffff;
   font-weight: bold;
 }
@@ -250,7 +250,7 @@ h1{
   position: relative;
   margin: 2em 40px;
   padding: 0.5em 0.1em;
-  border: solid 3px #f19407;
+  border: solid 3px #3b80ff;
   border-radius: 8px;
   width: 700px;
   height: 100px;
@@ -263,7 +263,7 @@ h1{
   padding: 0 9px;
   line-height: 1;
   font-size: 19px;
-  background: #f19407;
+  background: #3b80ff;
   color: #ffffff;
   font-weight: bold;
 }
