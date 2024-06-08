@@ -12,6 +12,12 @@ h1{
     margin: 50px auto;
 }
 
+/*#star_frame{
+  position: absolute;
+  left: 22%;
+  top: 19%;
+}*/
+
 /*ボタン１*/
 .button1 {
     text-align: center; /* このスタイルは特に必要ないかもしれませんが、他の用途に使っているなら残しておきます */
