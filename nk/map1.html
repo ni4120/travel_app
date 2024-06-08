@@ -6,45 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
  </head>
+ <script>
+    window.addEventListener("DOMContentLoaded", () => {
+  // 星を表示するための親要素を取得
+  const stars = document.querySelector(".stars");
+
+  // 星を生成する関数
+  const createStar = () => {
+    const starEl = document.createElement("span");
+    starEl.className = "star";
+    const minSize = 1; // 星の最小サイズを指定
+    const maxSize = 2; // 星の最大サイズを指定
+    const size = Math.random() * (maxSize - minSize) + minSize;
+    starEl.style.width = `${size}px`;
+    starEl.style.height = `${size}px`;
+    starEl.style.left = `${Math.random() * 100}%`;
+    starEl.style.top = `${Math.random() * 100}%`;
+    starEl.style.animationDelay = `${Math.random() * 10}s`;
+    stars.appendChild(starEl);
+  };
+
+  // for文で星を生成する関数を指定した回数呼び出す
+  for (let i = 0; i <= 500; i++) {
+    createStar();
+  }
+});
+</script>
  <body>
-    <h1>map</h1>
-    <div class="button1">
-        <a href="#">My Page</a> <!--＃はリンク先の名前-->
-    </div>
-    <div class="button2">
-        <a href="#">New Post</a> <!--＃はリンク先の名前-->
-    </div>
-    <div class="button3">
-        <a href="#">Users</a> <!--＃はリンク先の名前-->
-    </div>
-    <div class="button4">
-        <a href="#">Logout</a> <!--＃はリンク先の名前-->
-    </div>
-    <img src="city.png" alt="写真" width="800" height="400">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start"></span>
-    
-    <div class="tab_wrap">
-        <input id="tab1" type="radio" name="tab_btn" checked>
-        <input id="tab2" type="radio" name="tab_btn">
-        <input id="tab3" type="radio" name="tab_btn">
-
-        <div class="tab_area">
-            <label class="tab1_label" for="tab1">A</label>
-            <label class="tab2_label" for="tab2">B</label>
-            <label class="tab3_label" for="tab3">C</label>
+    <div class="stars">
+        <h1>map</h1>
+         <div class="button1">
+            <a href="#">My Page</a> <!--＃はリンク先の名前-->
         </div>
-
-        <div class="panel_area">
-            <div id="panel1" class="tab_panel">
-                <p>a</p>
+        <div class="button2">
+            <a href="#">New Post</a> <!--＃はリンク先の名前-->
+        </div>
+        <div class="button3">
+            <a href="#">Users</a> <!--＃はリンク先の名前-->
+        </div>
+        <div class="button4">
+            <a href="#">Logout</a> <!--＃はリンク先の名前-->
+        </div>
+        <img src="city.png" alt="写真" width="800" height="400">
+        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start"></span>
+        <!--<img src="cloud.png" alt="雲" width="600" height="300">
+        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="kumo"></span>
+    -->
+        <div class="tab_wrap">
+            <input id="tab1" type="radio" name="tab_btn" checked>
+            <input id="tab2" type="radio" name="tab_btn">
+            <input id="tab3" type="radio" name="tab_btn">
+            
+            <div class="tab_area">
+                <label class="tab1_label" for="tab1">A</label>
+                <label class="tab2_label" for="tab2">B</label>
+                <label class="tab3_label" for="tab3">C</label>
             </div>
-            <div id="panel2" class="tab_panel">
-                <p>b</p>
-            </div>
-            <div id="panel3" class="tab_panel">
-                <p>C</p>
+            
+            <div class="panel_area">
+                <div id="panel1" class="tab_panel">
+                    <p>a</p>
+                </div>
+                <div id="panel2" class="tab_panel">
+                    <p>b</p>
+                </div>
+                <div id="panel3" class="tab_panel">
+                    <p>C</p>
+                </div>
             </div>
         </div>
     </div>
- </body>
+</body>
  </html>
